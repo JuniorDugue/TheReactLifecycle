@@ -9,7 +9,7 @@ class App extends React.Component {
   constructor() {
     super()
     // State for our class component is one object,
-    // unlike split-up state when we use hooks
+    // unlike split-up state when we use hooks //
     this.state = {
       // we want to work with mutable data,
       // rather than just data from the file.
@@ -71,7 +71,8 @@ class App extends React.Component {
     })
   }
 
-  render() {
+  render() { //never pass a param to render()
+    this.setState() //why will this crush our app? because of infinite hook
     return (
       <div className="App">
         <div className="header">

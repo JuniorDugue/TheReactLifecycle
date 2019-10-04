@@ -1,14 +1,22 @@
-import React from "react";
+import React, { Component } from "react";
 
-const Item = props => {
-  return (
-    <div
-      onClick={props.onClick}
-      className={`item${props.item.purchased ? " purchased" : ""}`}
-    >
-      <p>{props.item.name}</p>
-    </div>
-  );
-};
+class Item extends Component {
+  render() {
+    //you can define
+    // const {onClick, item} = this.props
+    
+    return (
+      <div
+        onClick={this.props.onClick}
+        className={`item${this.props.item.purchased ? " purchased" : ""}`}
+      >
+        <p>{this.props.item.name}</p>
+      </div>
+    );
+  }
+}
 
 export default Item;
+
+//add this dot to the props dot codes since its no longer a functional 
+//component, its now a class component
